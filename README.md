@@ -1,2 +1,7 @@
-# DW1A3EX
-EXERCÍCIOS E PROJETOS DO IFSP
+# DW1A3
+
+Disciplina de desenvolvimento web 1.
+
+Nome: Guilherme Dantas 
+
+Prontuário: SP3017087
