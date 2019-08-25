@@ -1,0 +1,14 @@
+h1, h2, h3{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+p{
+    text-align: justify;
+    line-height: 2;
+}
+
+body{
+    background-color: #93D7ED;
+}
