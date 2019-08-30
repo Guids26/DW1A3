@@ -1,8 +1,18 @@
-h1, h2, h3, h4{
+#tituloprincipal{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f4e3e2;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 5px 2px  black;
+}
+#SobreMim, #ComoTrabalho, #Experiencia, #Contato{
+    
     background-color: black;
     color: white;
+    font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
-    text-align: left;
+    text-align: center;
+    padding: 1px;
 }
 p{
     text-align: justify;
@@ -10,11 +20,31 @@ p{
 }
 
 body{
-    background-color: #93D7ED;
+    background-color: #fe5f55;
 }
 
-redessociais {
-    float: left;
-        width: 180px;
-        height: 80px;
-    }
+#redessociais {
+    float: center;
+    margin-top: 10;
+    padding: 5px;
+    width: 60; height: 60;
+
+}
+
+#menu{
+    background-color: #d3d5d7;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+ul{
+   list-style: none outside none; 
+   margin:0; padding: 0; 
+   text-align: center; 
+}
+li{
+    margin: 0 10px;
+    display: inline;
+}
+
