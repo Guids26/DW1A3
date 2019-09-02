@@ -1,9 +1,9 @@
-# DW1A3
+## DW1A3
 
 Disciplina de desenvolvimento web 1.
 
 Nome: Guilherme Dantas 
 Prontuário: SP3017087
 
-EXERCÍCIOS:
+#EXERCÍCIOS:
 [Meu Site](Meu Site/bio.html)
