@@ -5,8 +5,8 @@
     background-color: #7585a3; 
     border-bottom:8px solid black;
     font-family: Impact, Haettenschweiler, Charcoal, sans-serif;
-    color: #09bbf1;
     font-size: 50px;
+    color: #09bbf1;
     text-align: center;
     text-shadow: 5px 2px  black;
 }
@@ -41,7 +41,7 @@ body{
     background-color: #4c70be;
 }
 
-#menu{
+.menu{
     text-transform: lowercase;
     text-align: center;
     background-color: #7585a3;
@@ -103,7 +103,7 @@ main div{
     background-size: 40px 40px;
 }
 
-header{
+.header{
     grid-area: hd;
 }
 
@@ -111,7 +111,7 @@ main{
     grid-area: main;
 }
 
-nav{
+.menu{
     grid-area: nv;
 }
 
@@ -122,6 +122,6 @@ footer{
 .grid-container{
     display: grid;
     grid-template-areas: "hd hd" "main nv" "ft ft";
-    grid-template-rows: 5% 75% 10%;
-    grid-template-columns: 65% 35%;
+    grid-template-rows: 30% 65% 5%;
+    grid-template-columns: 80% 20%;
 }
