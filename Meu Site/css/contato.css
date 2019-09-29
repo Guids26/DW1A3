@@ -1,0 +1,30 @@
+.FormContato{
+    background-color: gray;
+    border: 2px solid black;
+    margin: 2%;
+}
+
+.FormContato input {
+    margin: 1%;
+    border: 1px solid orangered;
+
+}
+
+.FormContato .nomemail input{
+    width: 80%;
+}
+
+.FormContato .msg input{
+    width: 80%;
+    height: 50%;
+}
+
+.FormContato .msg textarea{
+    margin: 1%;
+    width: 80%;
+    border: 1px solid orangered;
+}
+
+.FormContato p{
+    font-weight: bold;
+}

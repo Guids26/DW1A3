@@ -1,0 +1,49 @@
+.cabecalho h1{
+    font-family: Impact, Haettenschweiler, Charcoal, sans-serif;
+    font-size: 10vh;
+    color: #09bbf1;
+    text-align: center;
+    text-shadow: 5px 2px  black;
+    margin: 0px;
+}
+
+.cabecalho{
+    background-color: #7585a3; 
+    border-bottom:8px solid black;
+}
+
+body{
+    background-color: #4c70be;
+    height: 100%;
+}
+
+.menu{
+    text-transform: lowercase;
+    text-align: center;
+    background-color: #7585a3;
+    padding: 10px;
+    font-family: 'Work Sans', sans-serif;
+    border: 2px solid black;
+    font-size: 20px;
+    height: 100%;
+    margin: 0.5%;
+    grid-area: nv;
+    color: black;
+}
+.menu li{
+    display: inline-block;
+    margin-right: 2%;
+    
+}
+
+.content{
+    width: 72%;
+    margin: auto;
+    padding: auto auto; 
+}
+
+.rodape{
+    grid-area: ft;
+    background-color: #7585a3;
+    height: 100%;
+}
