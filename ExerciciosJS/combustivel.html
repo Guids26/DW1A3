@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Combustíveis</h1>
+    <label for="gasolina">Gasolina</label>
+    <input type="number" name="gasolina" id="gasolina">
+    <label for="alcool">Álcool</label>
+    <input type="number" name="alcool" id="alcool">
+    <button id ="verificar" onclick="VerificaVantagem();">Verificar</button>
+    <br>
+    <p id="vantagem"></p>
+<style>
+#verificar{
+    margin: 10px;
+}
+</style>
+
+    <script>
+    function VerificaVantagem(){
+        var precoGasolina = parseFloat(document.getElementById("gasolina").value).toFixed(2);
+        var precoAlcool = parseFloat(document.getElementById("alcool").value).toFixed(2);
+
+        if(precoAlcool <= precoGasolina*0.70){
+            document.getElementById("vantagem").textContent = "O alcool no preço de R$"+precoAlcool+" é mais vantajoso que a gasolina no preço de R$"
+            +precoGasolina+"."
+        }
+        else{
+            document.getElementById("vantagem").textContent = "A gasolina no preço de R$"+precoGasolina+" é mais vantajoso que o alcool no preço de R$"
+            +precoAlcool+"."
+        }
+    }
+    
+    </script>
+    
+
+</body>
+</html>
