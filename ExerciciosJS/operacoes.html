@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operações</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="">Valor A</label>
+        <input type="number" name="num1" id="PORRADONUMERO1"><br><br>
+        <label for="">Valor B</label>
+        <input type="number" name="num2" id="PORRADONUMERO2">
+
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Operação
+                </td>
+                <td>
+                    Valor
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p><span class="spannum1"></span> + <span class="spannum2"></span></p>
+                </td>
+                <td>
+                    <span id="soma"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span class="spannum1"></span> * <span class="spannum2"></span></p>
+                </td>
+                <td>
+                    <span id="multiplicacao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span class="spannum1"></span> / <span class="spannum2"></span></p>
+                </td>
+                <td>
+                    <span id="divisao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><span class="spannum1"></span> % <span class="spannum2"></span></p>
+                </td>
+                <td>
+                    <span id="resto"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            margin-left: 0 auto;
+        }
+        table {
+            width: 100px;
+            margin: 10px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td, tr{
+            border: 1px solid;
+        }
+    </style>
+
+    <button onclick="PreencherColuna();">Calcular</button>
+
+
+    <script>
+        function PreencherColuna() {
+            var num1 = document.getElementById("PORRADONUMERO1").value;
+            var num2 = document.getElementById("PORRADONUMERO2").value;
+            soma = parseInt(num1) + parseInt(num2);
+            multiplicacao = parseInt(num1) * parseInt(num2);
+            divisao = parseInt(num1) / parseInt(num2);
+            resto = parseInt(num1) % parseInt(num2);
+            document.getElementById("soma").textContent = soma;
+            document.getElementById("multiplicacao").textContent = multiplicacao;
+            document.getElementById("divisao").textContent = divisao;
+            document.getElementById("resto").textContent = resto;
+            for (var i = 0; i < 5; i++) {
+                document.getElementsByClassName("spannum1")[i].textContent = num1;
+                document.getElementsByClassName("spannum2")[i].textContent = num2;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

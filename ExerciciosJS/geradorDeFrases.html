@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerador de frases</title>
+</head>
+
+<body>
+    <div class="divPrin">
+        <button id="botaoSorte" onclick="gerarFrase();">Minha Sorte hoje</button>
+    </div>
+
+    <style>
+
+        body{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .divPrin {
+            width: 300px;
+            height: 500px;
+            border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modalcontainer {
+            width: 100vw;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            background: rgba(0,0,0,.5);
+            position: fixed;
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal{
+            margin: 10px;
+            background: white;
+            width: 60%;
+            min-width: 300px;
+            border: 10px solid rgb(25, 25, 139);
+            box-shadow: 0 0 0 10px white;
+            position: relative;
+
+        }
+
+        .mostrar{
+            display: flex;
+            
+        }
+
+        .fechar{
+            position: absolute;
+            font-size: 0.8em;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border: 4px solid black;
+            cursor: pointer;
+        }
+    </style>
+
+    <div id="modal-frase" class="modalcontainer">
+        <div class="modal">
+            <button class="fechar">x</button>
+            <h3>Biscoito da sorte</h3>
+            <p id="txt"></p>
+        </div>
+    </div>
+
+
+    <script>
+        var frases = ['Um pedaço de pão comido em paz é melhor do que um banquete comido com ansiedade - (Esopo).'
+            , 'Todo aquele que encobre a própria injustiça debaixo do manto lustroso da eloqüência merece um grande castigo - (Eurípedes).',
+            'A gratidão é a virtude das almas nobres - (Esopo).',
+            'Quem conhece a felicidade não consegue mais aceitar humildemente a tristeza - (Paulo Coelho).',
+            'O tesouro dos humildes é a gratidão',
+            'Nenhum trabalho, por mais humilde que seja, desonra o homem',
+            'Do mesmo modo que a união faz a força, a discórdia leva a uma rápida derrota - (Esopo).',
+            'A bondade é a força do fraco',
+            'Não notaste como costumavam calar quando te aproximava deles e que sua força os abandonava tal como a fumaça de um fogo que se extingue? Sim meu amigo, és a má consciência de teus próximos porque são indignos de ti. Por isso te odeiam e bem que gostariam de sugar teu sangue - (Friedrich Nietzsche).',
+            'Com a força de nosso amor, de nossa vontade, podemos mudar o nosso destino, e o destino de muita gente - (Paulo Coelho).'];
+
+
+            const botao = document.getElementById('botaoSorte');
+            botao.addEventListener('click', function(){
+                iniciaModal('modal-frase');
+                gerarFrase();
+                
+            });
+
+            const botaoFechar = document.getElementById
+
+
+        function gerarFrase() {
+            num = Math.floor(Math.random() * (10));
+            document.getElementById("txt").textContent = frases[num];
+        }
+
+        function iniciaModal(modalId){
+            const modal = document.getElementById(modalId);
+            console.log(modal);
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) =>{
+                if(e.target. id == modalId || e.target.className == 'fechar'){
+                    modal.classList.remove('mostrar');
+                }
+            } );
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saudações</title>
+
+
+
+</head>
+
+<body>
+    <h1 id="titulo">Saudações!</h1>
+    <p id="vwinfo">O tamanho do viewport:</p>
+
+    <script>
+        verificarHora();
+        mostraViewport();
+
+        function verificarHora() {
+            var data = new Date;
+            var hora = data.getHours();
+            if (hora >= 0 && hora < 12) {
+                document.getElementById("titulo").textContent = "Bom Dia!";
+            }
+            else
+            if (hora >= 12 && hora <= 18) {
+                document.getElementById("titulo").textContent = "Boa Tarde!";
+            }
+            else
+            if (hora >= 19 && hora < 23) {
+                document.getElementById("titulo").textContent = "Boa Noite!";
+            }
+        }
+
+        function mostraViewport(){
+            document.getElementById("vwinfo").textContent = document.getElementById("vwinfo").textContent + " Largura: "+ window.innerWidth + ", Altura: " + window.innerHeight;
+        }
+
+    </script>
+
+</body>
+
+</html>

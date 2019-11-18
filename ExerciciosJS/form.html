@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+</head>
+
+<body>
+        <form action="">
+            Opção 1: 
+            <input type="checkbox" class="checkAll" name="checkAll"><br>
+            Opção 2:
+            <input type="checkbox" class="checkAll" name="checkAll"><br>
+            Opção 3:
+            <input type="checkbox" class="checkAll" name="checkAll"><br>
+            Opção 4:
+            <input type="checkbox" class="checkAll" name="checkAll"><br>
+            Opção 5:
+            <input type="checkbox" class="checkAll" name="checkAll"><br>
+            Marcar todos:
+            <input type="checkbox" id="selecionarTodos" name="checkAll" onclick="checkOnAll();"><br>
+            <p>Deixe uma mensagem: <span id="caracRestantes">140</span> Caracteres restantes</p>
+            <textarea name="" id="msg" cols="30" rows="10" maxlength="140" onclick="contaCaracteres(this);" onkeydown="contaCaracteres(this);" onkeyup="contaCaracteres(this);"></textarea>
+        </form>
+
+        <button onclick="ZerarCampos();">Reset</button>
+
+    <script>
+        var selecionarTodos = document.getElementById("selecionarTodos");
+        function checkOnAll() {
+            if (selecionarTodos.checked == true) {
+                for(var i = 0 ; i < 5 ; i++ ){
+                document.getElementsByClassName("checkAll")[i].checked = true;
+            }
+            }
+            else{
+                for(var i = 0 ; i < 5 ; i++ ){
+                document.getElementsByClassName("checkAll")[i].checked = false;
+            }
+            }
+        }
+        
+
+        function ZerarCampos(){
+            alert("reserabdoi");
+            for(var i = 0 ; i < 5 ; i++ ){
+                document.getElementsByClassName("checkAll")[i].checked = false;
+            }
+            document.getElementById("selecionarTodos").checked = false;
+            document.getElementById("msg").value = "";
+        }
+
+        function contaCaracteres (campo_passado){
+            var limite = 140;
+            var campo = campo_passado.value.length;
+            var restante = limite - campo;
+            restante.toString();
+            document.getElementById("caracRestantes").textContent = restante;
+        };
+
+
+
+        
+
+        
+
+
+
+    </script>
+
+
+    
+
+
+</body>
+
+</html>
