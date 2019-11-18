@@ -12,9 +12,9 @@
 
     <form action="">
         <label for="">Valor A</label>
-        <input type="number" name="num1" id="PORRADONUMERO1"><br><br>
+        <input type="number" name="num1" id="num1"><br><br>
         <label for="">Valor B</label>
-        <input type="number" name="num2" id="PORRADONUMERO2">
+        <input type="number" name="num2" id="num2">
 
     </form>
 
@@ -87,12 +87,12 @@
 
     <script>
         function PreencherColuna() {
-            var num1 = document.getElementById("PORRADONUMERO1").value;
-            var num2 = document.getElementById("PORRADONUMERO2").value;
-            soma = parseInt(num1) + parseInt(num2);
-            multiplicacao = parseInt(num1) * parseInt(num2);
-            divisao = parseInt(num1) / parseInt(num2);
-            resto = parseInt(num1) % parseInt(num2);
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            soma = (parseFloat(num1) + parseFloat(num2)).toFixed(2);
+            multiplicacao = (parseFloat(num1) * parseFloat(num2)).toFixed(2);
+            divisao = (parseFloat(num1) / parseFloat(num2)).toFixed(2);
+            resto = (parseFloat(num1) % parseFloat(num2)).toFixed(2);
             document.getElementById("soma").textContent = soma;
             document.getElementById("multiplicacao").textContent = multiplicacao;
             document.getElementById("divisao").textContent = divisao;
