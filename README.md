@@ -18,4 +18,4 @@ EXERCICIOS JS -
 
 [ExerciciosJS - 4 - Gerador de frases](ExerciciosJS/geradorDeFrases.html)
 
-[ExerciciosJS - 5 - IMC](ExerciciosJS/imc.html)
+[ExerciciosJS - 6 - IMC](ExerciciosJS/imc.html)
