@@ -18,6 +18,6 @@ EXERCICIOS JS -
 
 [ExerciciosJS - 4 - Gerador de frases](ExerciciosJS/geradorDeFrases.html)
 
-[ExerciciosJS - 5 - IMC](ExerciciosJS/combustivel.html)
+[ExerciciosJS - 5 - Combustivel](ExerciciosJS/combustivel.html)
 
 [ExerciciosJS - 6 - IMC](ExerciciosJS/imc.html)
