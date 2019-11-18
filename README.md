@@ -9,6 +9,7 @@ Prontuário: SP3017087
 [Meu Site](Meu Site/index.html)
 
 EXERCICIOS JS - 
+
 [ExerciciosJS - 1 - Saudações](ExerciciosJS/saudacoes.html)
 
 [ExerciciosJS - 2 - Formulário](ExerciciosJS/form.html)
@@ -16,3 +17,5 @@ EXERCICIOS JS -
 [ExerciciosJS - 3 - Operações](ExerciciosJS/operacoes.html)
 
 [ExerciciosJS - 4 - Gerador de frases](ExerciciosJS/geradorDeFrases.html)
+
+[ExerciciosJS - 5 - IMC](ExerciciosJS/imc.html)
