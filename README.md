@@ -20,4 +20,6 @@ EXERCICIOS JS -
 
 [ExerciciosJS - 5 - Combustivel](ExerciciosJS/combustivel.html)
 
-[ExerciciosJS - 6 - IMC](ExerciciosJS/imc.html)
+[ExerciciosJS - 6 - Temperatura](ExerciciosJS/temperatura.html)
+
+[ExerciciosJS - 7 - IMC](ExerciciosJS/imc.html)
