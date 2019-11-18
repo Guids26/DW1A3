@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMC</title>
+</head>
+
+<body>
+    <main>
+        <div class="container-IMC">
+            <h3>IMC</h3>
+            <form>
+                <div>
+                    <label for="altura">Altura</label>
+                    <input type="number" min="0" max="3" step="0.01" name="altura" id="altura"> m<br>
+                </div>
+                <div>
+                    <label for="peso">Peso </label>
+                    <input type="number" step="0.01" name="peso" id="peso"> kg
+                </div>
+            </form>
+            <button onclick="CalculaIMC();" ondblclick = "CalculaIMC();" id="calcular">Calcular</button>
+        </div>
+        <div class="conclusaodiv">
+            <p id="conclusao">Conclusão: </p>
+        </div>
+
+
+        <style>
+            #calcular {
+                width: 146px;
+                height: 50px;
+                margin-left: 30px;
+                background-color: rgb(12, 109, 12);
+                cursor: pointer;
+            }
+
+            #peso {
+                margin-left: 15px;
+                margin-top: 18px;
+            }
+
+            main {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+            h3 {
+                color: white;
+                border: 1px solid black;
+            }
+
+            label{
+                color: white;
+            }
+
+            input{
+                width: 146px;
+                height: 12px;
+            }
+
+            div {
+                margin: 1%;
+            }
+
+            .container-IMC {
+                border: 2px solid black;
+                width: 350px;
+                text-align: center;
+                background: rgb(27, 27, 252);
+            }
+            .conclusaodiv{
+                justify-content: center;
+                align-content: center;
+                border: 2px solid black;
+
+            }
+        </style>
+    </main>
+
+    <script>
+        function CalculaIMC() {
+            var peso = parseFloat(document.getElementById("peso").value); 
+            var altura = parseFloat(document.getElementById("altura").value); 
+            var imc = (peso / (altura * altura)).toFixed(2); 
+            var imcNormal = parseFloat(24.9);
+            alert(imc);
+            var conclusao = document.getElementById("conclusao");
+            if (imc >= 0  && imc <= 16.9) {
+                var engordar = (parseFloat(imcNormal)  - parseFloat(imc)).toFixed(2) ;
+                conclusao.textContent = "Sinto muito mas seu IMC é: " + imc +  ", por isso você está muito abaixo do peso e deveria engordar "
+                + engordar + "kg." ;
+            }else if(imc >=17  && imc <= 18.4){
+                var engordar = (parseFloat(imcNormal)  - parseFloat(imc)).toFixed(2) ;
+                conclusao.textContent = "Sinto muito mas seu IMC é: " + imc +  ", por isso você está abaixo do peso e deveria engordar "
+                + engordar + "kg." ;
+            }
+            else if (imc >= 18.5 && imc <=24.9){
+                conclusao.textContent = "Conclusão: parabéns, seu IMC é "+ imc + " você está com o peso ideal.";
+            }
+            else if(imc >= 25 && imc <=29.9){
+                var emagrecer = (parseFloat(imc)  - parseFloat(imcNormal)).toFixed(2) ;
+                conclusao.textContent = "Conclusão: Sinto muito, seu IMC é: "+ imc +"e por isso você está acima do peso e deveria emagrecer "
+                + emagrecer +" kg.";
+            }
+            else if(imc >= 30 && imc <=34.9){
+                var emagrecer = (parseFloat(imc)  - parseFloat(imcNormal)).toFixed(2) ;
+                conclusao.textContent = "Conclusão: Sinto muito, seu IMC é: "+ imc +"e por isso você está com Obesidade de I grau e deveria emagrecer "
+                + emagrecer +" kg.";
+            }
+            else if(imc >= 35 && imc <=40){
+                var emagrecer = (parseFloat(imc)  - parseFloat(imcNormal)).toFixed(2) ;
+                conclusao.textContent = "Conclusão: Sinto muito, seu IMC é: "+ imc +"e por isso você está com Obesidade de II grau e deveria emagrecer "
+                + emagrecer +" kg.";
+            }
+            else if (imc > 40){
+                var emagrecer = (parseFloat(imc)  - parseFloat(imcNormal)).toFixed(2) ;
+                conclusao.textContent = "Conclusão: Sinto muito, seu IMC é: "+ imc +"e por isso você está com Obesidade de III grau e deveria emagrecer "
+                + emagrecer +" kg.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

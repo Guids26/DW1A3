@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="t-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="inputs-container">
+            <label>Celsius
+                <input type="number" id="Celsius" placeholder="Celsius" onclick="CelparaFah(this.value);" onchange="CelparaFah(this.value);" oninput="CelparaFah(this.value);">
+            </label>
+            <label>Fahrenheit
+                <input type="number" id="Fahrenheit"  placeholder="Fahrenheit" onclick="FahparaCel(this.value);" onchange="FahparaCel(this.value);" oninput="FahparaCel(this.value);" >
+            </label>
+
+        </div>
+    </main>
+
+    <style>
+        main {
+            margin-top: 20%;
+            height: 720px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .inputs-container {
+            height: 100%;
+            margin: 5px;
+            display: flex;
+            align-content: center;
+        }
+
+        input {
+            display: block;
+            margin-left: 5px;
+            text-align: center;
+            height: 36px;
+            width: 146px;
+        }
+        label{
+            margin-left: 20px;
+        }
+    </style>
+
+    <script>
+        function CelparaFah(num){
+            var celsius = parseFloat(num);
+            var fahrenheit = (celsius * 1.8) + 32 ;
+            document.getElementById("Fahrenheit").value = fahrenheit;
+        }
+
+        function FahparaCel(num){
+            var fahrenheit = parseFloat(num);
+            var celsius = (fahrenheit - 32 ) / 1.8;
+            document.getElementById("Celsius").value = celsius;
+        }
+    </script>
+
+</body>
+
+</html>
